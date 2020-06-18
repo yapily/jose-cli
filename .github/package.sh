@@ -7,4 +7,4 @@ cp bin/jose.sh releases/jose-${APP_VERSION}/jose
 cp target/jose-jwkset-cli-${APP_VERSION}.jar releases/jose-${APP_VERSION}/jose-jwkset-cli.jar
 
 cd releases
-zip -r releases/jose-cli-${APP_VERSION}.zip release/jose-${APP_VERSION}/
+zip -r releases/jose-cli-${APP_VERSION}.zip releases/jose-${APP_VERSION}/
