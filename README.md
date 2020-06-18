@@ -16,8 +16,20 @@ wget https://github.com/yapily/jose-cli/releases/download/jose-jwkset-cli-$lates
 unzip jose-cli-$latest_version.zip
 cp jose-$latest_version/* /usr/local/bin/
 chmod +x /usr/local/bin/jose
+cd -
 ```
 
 ## How to use it
 
+The first time, you will want to initialise a set of keys.
+
+```
+jose jwks-sets init -o /tmp/keys 
+```
+
+To rotate the keys, run
+
+```
+jose jwks-sets rotate -k /tmp/keys -o /tmp/keys
+```
 

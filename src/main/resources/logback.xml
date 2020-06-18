@@ -14,14 +14,30 @@
         </appender>
     </appender>
 
-    <logger additivity="false" level="ERROR" name="org.springframework">
-        <appender-ref ref="ASYNC-FULL-STDOUT"/>
-    </logger>
-    <logger additivity="false" level="DEBUG" name="com.yapily">
-        <appender-ref ref="ASYNC-FULL-STDOUT"/>
-    </logger>
-    <root level="INFO">
-        <appender-ref ref="ASYNC-FULL-STDOUT"/>
-    </root>
+    <appender name="ASYNC-FULL-STDOUT-CLI" class="ch.qos.logback.classic.AsyncAppender">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>"%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(:){faint} %msg%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"</pattern>
+            </encoder>
+        </appender>
+    </appender>
+
+    <springProfile name="default">
+        <logger additivity="false" level="ERROR" name="org.springframework">
+            <appender-ref ref="ASYNC-FULL-STDOUT"/>
+        </logger>
+        <logger additivity="false" level="DEBUG" name="com.yapily">
+            <appender-ref ref="ASYNC-FULL-STDOUT"/>
+        </logger>
+        <root level="INFO">
+            <appender-ref ref="ASYNC-FULL-STDOUT"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="cli">
+        <logger additivity="false" level="DEBUG" name="com.yapily">
+            <appender-ref ref="ASYNC-FULL-STDOUT-CLI"/>
+        </logger>
+    </springProfile>
 
 </configuration>

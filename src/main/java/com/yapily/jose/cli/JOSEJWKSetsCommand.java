@@ -14,8 +14,8 @@ import picocli.CommandLine;
 
 @Component
 @CommandLine.Command(
-        name = "jose",
+        name = "jwks-sets",
         mixinStandardHelpOptions = true,
-        subcommands = JOSEJWKSetsCommand.class
+        subcommands = {JWKSetsRotateCommand.class, JWKSetsInitCommand.class}
 )
-public class JOSECommand {}
+public class JOSEJWKSetsCommand {}
