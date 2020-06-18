@@ -15,7 +15,7 @@
 
 	<groupId>com.yapily</groupId>
 	<artifactId>jose-jwkset-cli</artifactId>
-	<version>0.0.10-SNAPSHOT</version>
+	<version>0.0.10</version>
 	<name>jose-jwkset-cli</name>
 	<description>Manipulate JWKs set using a CLI</description>
 
@@ -37,7 +37,7 @@
 		<connection>scm:git:https://github.com/yapily/jose-cli.git</connection>
 		<developerConnection>scm:git:https://github.com/yapily/jose-cli.git</developerConnection>
 		<url>https://github.com/yapily/jose-cli.git</url>
-		<tag>HEAD</tag>
+		<tag>jose-jwkset-cli-0.0.10</tag>
 	</scm>
 
 
