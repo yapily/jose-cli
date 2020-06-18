@@ -71,6 +71,8 @@ public class RotateJwkSetsService {
             // Convert to JWK format
            return new ECKey.Builder(curve, (ECPublicKey) keyPair.getPublic())
                    .privateKey((ECPrivateKey) keyPair.getPrivate())
+                   .keyUse(keyUse)
+                   .keyID(UUID.randomUUID().toString())
                    .build();
        } else if (type == KeyType.RSA) {
            gen.initialize(keySize);

@@ -78,7 +78,7 @@ class RotateJwkSetsServiceTest {
                 .build();
 
         //WHEN
-        RotationJwkSets rotatedJwkSets = rotateJwkSetsService.rotate(initialJwkSetsForTest);
+        RotationJwkSets rotatedJwkSets = rotateJwkSetsService.revoke(initialJwkSetsForTest);
 
         //THEN
         assertThat(rotatedJwkSets.getValidKeys().getKeys().isEmpty()).isTrue();
