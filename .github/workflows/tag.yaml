@@ -12,7 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-
+      - name: Install xmllint
+        run: apt-get -y install libxml2-utils
       - name: Build
         uses: qcastel/github-actions-maven-cmd@master
         with:
