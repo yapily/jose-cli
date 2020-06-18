@@ -1,6 +1,10 @@
-mkdir -p release/jose
-cp bin/jose.sh release/jose
-
 APP_VERSION=`xmllint --xpath '/*[local-name()="project"]/*[local-name()="version"]/text()' pom.xml`
 echo $APP_VERSION
-cp target/jose-jwkset-cli-${APP_VERSION}.jar release/jose/jose-jwkset-cli.jar
+
+mkdir -p releases/jose-${APP_VERSION}
+
+cp bin/jose.sh releases/jose-${APP_VERSION}/jose
+cp target/jose-jwkset-cli-${APP_VERSION}.jar releases/jose-${APP_VERSION}/jose-jwkset-cli.jar
+
+cd releases
+zip -r releases/jose-cli-${APP_VERSION}.zip release/jose-${APP_VERSION}/

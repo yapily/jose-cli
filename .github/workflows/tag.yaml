@@ -12,8 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Install xmllint
-        run: sudo apt-get -y install libxml2-utils
+      - name: Install xmllint and zip
+        run: sudo apt-get -y install libxml2-utils zip
       - name: Build
         uses: qcastel/github-actions-maven-cmd@master
         with:
@@ -24,7 +24,7 @@ jobs:
         uses: svenstaro/upload-release-action@v1-release
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: release/jose/*
+          file: releases/jose-cli-*.zip
           tag: ${{ github.ref }}
           overwrite: true
           file_glob: true
