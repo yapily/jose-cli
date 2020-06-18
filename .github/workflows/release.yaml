@@ -23,10 +23,6 @@ jobs:
         with:
           maven-args: "clean install"
 
-      - uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-
       - name: Temporarily disable "include administrators" branch protection
         uses: benjefferies/branch-protection-bot@master
         if: always()
@@ -42,8 +38,6 @@ jobs:
           git-release-bot-name: "bot-yapily"
           git-release-bot-email: "bot@yapily.com"
 
-          maven-args: "-Dmaven.javadoc.skip=true -DskipTests -DskipITs -Ddockerfile.skip -DdockerCompose.skip -Dmaven.deploy.skip=true"
-
           skip-perform: true
 
           access-token: ${{ secrets.BOT_GITHUB_REPO_ACCESS_TOKEN }}
@@ -55,3 +49,7 @@ jobs:
           access-token: ${{ secrets.BOT_GITHUB_REPO_ACCESS_TOKEN }}
           owner: yapily
           repo: jose-database
+
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

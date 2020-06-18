@@ -1,3 +1,11 @@
+| |Current Status|
+|---|---|
+|Build|[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fyapily%2Fjose-cli%2Fbadge%3Fref%3Dmaster&style=flat)](https://actions-badge.atrox.dev/yapily/jose-cli/goto?ref=master)|
+|Code coverage|[![codecov](https://codecov.io/gh/yapily/jose-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/yapily/jose-cli)
+|Latest release|![GitHub release (latest by date)](https://img.shields.io/github/v/release/yapily/jose-cli)|
+|License|![license](https://img.shields.io/github/license/yapily/jose-cli)|
+
+
 # JOSE CLI
 CLI based on the standard JOSE, to help you manipulate JWKs
 
