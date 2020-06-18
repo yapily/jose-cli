@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <property name="CONSOLE_LOG_PATTERN"
+              value="%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %msg%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+
+    <appender name="ASYNC-FULL-STDOUT" class="ch.qos.logback.classic.AsyncAppender">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            </encoder>
+        </appender>
+    </appender>
+
+    <logger additivity="false" level="ERROR" name="org.springframework">
+        <appender-ref ref="ASYNC-FULL-STDOUT"/>
+    </logger>
+    <logger additivity="false" level="DEBUG" name="com.yapily">
+        <appender-ref ref="ASYNC-FULL-STDOUT"/>
+    </logger>
+    <root level="INFO">
+        <appender-ref ref="ASYNC-FULL-STDOUT"/>
+    </root>
+
+</configuration>

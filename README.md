@@ -1,2 +1,4 @@
-# jose-jwkset-cli
-Manage your jwksets via a CLI
+# JOSE CLI
+CLI based on the standard JOSE, to help you manipulate JWTs and JWKs
+
+
