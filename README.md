@@ -20,7 +20,7 @@ Find the latest zip version (lets call it $latest_version from now) from https:/
 
 ```
 cd /tmp
-wget https://github.com/yapily/jose-cli/releases/download/jose-jwkset-cli-$latest_version/jose-cli-$latest_version.zip
+wget https://github.com/yapily/jose-cli/releases/download/jose-cli-$latest_version/jose-cli-$latest_version.zip
 unzip jose-cli-$latest_version.zip
 cp -rf jose-$latest_version/* /usr/local/bin/
 chmod +x /usr/local/bin/jose

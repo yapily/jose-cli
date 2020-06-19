@@ -14,10 +14,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.yapily</groupId>
-	<artifactId>jose-jwkset-cli</artifactId>
+	<artifactId>jose-cli</artifactId>
 	<version>0.0.18-SNAPSHOT</version>
-	<name>jose-jwkset-cli</name>
-	<description>Manipulate JWKs set using a CLI</description>
+	<name>jose-cli</name>
+	<description>JOSE CLI handles JWTS and JWKS.</description>
 
 	<properties>
 		<java.version>11</java.version>
