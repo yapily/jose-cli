@@ -15,7 +15,7 @@
 
 	<groupId>com.yapily</groupId>
 	<artifactId>jose-cli</artifactId>
-	<version>0.0.18-SNAPSHOT</version>
+	<version>0.0.18</version>
 	<name>jose-cli</name>
 	<description>JOSE CLI handles JWTS and JWKS.</description>
 
@@ -37,7 +37,7 @@
 		<connection>scm:git:https://github.com/yapily/jose-cli.git</connection>
 		<developerConnection>scm:git:https://github.com/yapily/jose-cli.git</developerConnection>
 		<url>https://github.com/yapily/jose-cli.git</url>
-		<tag>HEAD</tag>
+		<tag>jose-cli-0.0.18</tag>
 	</scm>
 
 
