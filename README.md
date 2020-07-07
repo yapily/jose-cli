@@ -7,7 +7,7 @@
 
 
 # JOSE CLI
-CLI based on the standard JOSE, to help you manipulate JWKs
+CLI based on the JOSE standard, to help you manipulate JWKs
 
 ## Requirements
 
@@ -15,7 +15,7 @@ You will need to have Java 11+ installed
 
 ## How to install
 
-Find the latest zip version (lets call it $latest_version from now) from https://github.com/yapily/jose-cli/releases
+Download the latest zip version (which will be referenced as $latest_version from this point onwards) from https://github.com/yapily/jose-cli/releases
 
 
 ```
@@ -29,13 +29,13 @@ cd -
 
 ## How to use it
 
-The first time, you will want to initialise a set of keys.
+To create a new set of keys, run:
 
 ```
 jose jwks-sets init -o /tmp/keys 
 ```
 
-To rotate the keys, run
+To rotate a set of existing keys, run:
 
 ```
 jose jwks-sets rotate -k /tmp/keys -o /tmp/keys
